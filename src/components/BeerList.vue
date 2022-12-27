@@ -41,9 +41,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <ul class="flex flex-wrap justify-center w-[40%] h-screen items-center">
+    <ul class="flex flex-wrap justify-around w-[40%] mx-auto h-screen items-center">
         <li @click="getDataToPopup(beer.id)" class="flex flex-col items-center text-center w-40 h-72 mt-5 mx-4 justify-center border-[1px] border-solid border-black p-8 cursor-pointer" v-for="beer in beersPagination" :key="beer.id">
-            <img class="w-12 h-52 " :src="beer.image_url" alt="beer-img">
+            <img class="w-12 h-52" :src="beer.image_url" alt="beer-img">
             <p class="text-center mt-5 text-sm font-bold">{{ beer.name }}</p>
         </li>
     </ul>
